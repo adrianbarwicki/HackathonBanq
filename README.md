@@ -14,3 +14,10 @@ Select the items to be paid and click on pay -> this will enable you to connect 
 
 ### Page 5: Confirmation page
 Confirmation page, you can jump back to the welcome screnn.
+
+## Start
+```
+npm install -g ionic
+npm install
+ionic serve
+```
