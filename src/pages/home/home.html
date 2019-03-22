@@ -1,13 +1,32 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <h2>SugerSplit</h2>
-  <p>
-    Easily split a receipt item-by-item
-  </p>
-  <button ion-button href="#" expand="block">Scan a receipt</button>
+<ion-content>
+    <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide style="background-image: url(/assets/image1.png); background-size: cover;">
+            <h2>SugerSplit</h2>
+            <p>
+              Easily split a receipt item-by-item
+            </p>
+            <button ion-button href="#" expand="block">Scan a receipt</button>
+        </ion-slide>
+        <ion-slide>
+          <h1>Why SugerSplit #1</h1>
+            <p>
+                Becase people split invoices 13 times a month.
+            </p>
+            <button ion-button href="#" expand="block">Scan a receipt</button>
+        </ion-slide>
+        <ion-slide>
+            <h1>Why SugerSplit #2</h1>
+              <p>
+                  Because groups mostly spend more than 8 minutes figuring out the right amount for everyone. 
+              </p>
+              <button ion-button href="#" expand="block">Scan a receipt</button>
+        </ion-slide>
+        <ion-slide>
+            <h1>Why SugerSplit #3</h1>
+              <p>
+                  Because at least one person overpays 10% when the invoice is split between 5 people.
+              </p>
+              <button ion-button href="#" expand="block">Scan a receipt</button>
+        </ion-slide>
+    </ion-slides>
 </ion-content>
