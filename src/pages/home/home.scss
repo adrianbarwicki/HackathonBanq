@@ -6,11 +6,19 @@
 }
 
 page-home {
-
+  font-family: 'Russo One', sans-serif;
 }
 
 ion-slide {
   background-color: grey;
   background-blend-mode: screen;
   background-size: cover; 
+
+  p {
+    padding: 10px;
+  }
+}
+
+h2 {
+  font-size: 4.4rem;
 }
