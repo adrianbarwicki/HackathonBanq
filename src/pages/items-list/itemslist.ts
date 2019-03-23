@@ -77,6 +77,8 @@ export class ItemsListPage {
 
         try {
           phoneNo = contact.phoneNumbers[0].value;
+
+          alert("Payment request sent to the phone number: " + phoneNo)
         } catch (err) {
           alert("cant get a phone number")
         }
