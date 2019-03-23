@@ -72,8 +72,14 @@ export class ItemsListPage {
   }
 
   private goToNextPage() {
-    (navigator as any).contacts.pickContact((contact) => {
-        alert("Will be sent to " + JSON.stringify(contact));
+    this.contacts.pickContact().then((contact) => {
+        let phoneNo;
+
+        try {
+          phoneNo = contact.phoneNumbers[0].value;
+        } catch (err) {
+          alert("cant get a phone number")
+        }
 
         this.navCtrl.push("confirmation");
     },function(err){
