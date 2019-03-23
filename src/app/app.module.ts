@@ -12,13 +12,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { Contacts } from '@ionic-native/contacts/ngx';
 import { ConfirmationPage } from '../pages/confirmation/confirmation';
-import { AboutPage } from '../pages/about/about';
 
 @NgModule({
   declarations: [
     MyApp,
     ContactPage,
-    AboutPage,
     HomePage,
     ItemsListPage,
     ConfirmationPage
@@ -29,7 +27,6 @@ import { AboutPage } from '../pages/about/about';
       MyApp, {}, {
         links: [
           { component: HomePage, name: 'Home', segment: '' },
-          { component: AboutPage, name: 'about', segment: 'about' },
           { component: ItemsListPage, name: 'itemslist', segment: 'itemslist' },
           { component: ConfirmationPage, name: 'confirmation', segment: 'confirmation' },
         ]
@@ -41,8 +38,7 @@ import { AboutPage } from '../pages/about/about';
     ContactPage,
     HomePage,
     ItemsListPage,
-    ConfirmationPage,
-    AboutPage
+    ConfirmationPage
   ],
   providers: [
     StatusBar,
