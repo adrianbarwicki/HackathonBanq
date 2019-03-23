@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 import { Contacts, ContactFieldType } from '@ionic-native/contacts/ngx';
+import { ContactPage } from '../contact/contact';
 
 @Component({
   selector: 'page-itemslist',
@@ -60,11 +61,15 @@ export class ItemsListPage {
   ];
 
 
-  constructor(public navCtrl: NavController, private contacts : Contacts) {
+  constructor(public navCtrl: NavController, private contacts : Contacts, private modalController: ModalController) {
     console.log("test")
   }
 
-  
+  public async openModal() {
+    const modal = await this.modalController.create({
+      component: ContactPage,
+    });
+  }
 
   private goToNextPage() {
     this.navCtrl.push("confirmation");

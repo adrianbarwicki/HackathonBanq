@@ -6,6 +6,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <button ion-button (click)="goToNextPage()" expand="block">Go back</button>
+<ion-content>
+    <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide style="background-image: url(/assets/image1.png);">
+            <h2>SugarSplit</h2>
+            <p>
+              You've successfuly split an invoice!
+            </p>
+            <button ion-button (click)="goToNextPage()" expand="block">Go back</button>
+        </ion-slide>
+    </ion-slides>
 </ion-content>
