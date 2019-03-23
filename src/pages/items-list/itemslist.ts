@@ -72,6 +72,14 @@ export class ItemsListPage {
   }
 
   private goToNextPage() {
-    this.navCtrl.push("confirmation");
+    (navigator as any).contacts.pickContact((contact) => {
+        alert("Will be sent to " + JSON.stringify(contact));
+
+        this.navCtrl.push("confirmation");
+    },function(err){
+        console.log('Error: ' + err);
+    });
+
+    
   }
 }
