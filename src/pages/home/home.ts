@@ -1,3 +1,4 @@
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -6,11 +7,22 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  constructor(private navCtrl: NavController) {
-    
+  constructor(private navCtrl: NavController, private camera: Camera) {
+
   }
 
-  private goToNextPage() {
-    this.navCtrl.push("about");
+  public takePictureAndGoToNextPage() {
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.FILE_URI,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
+    }
+
+    this.camera.getPicture(options).then((imageData) => {
+      this.navCtrl.push("itemslist");
+     }).catch((err) => {
+      this.navCtrl.push("itemslist");
+     });
   }
 }
