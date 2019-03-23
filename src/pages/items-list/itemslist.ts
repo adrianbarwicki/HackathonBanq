@@ -95,7 +95,7 @@ export class ItemsListPage {
           const totalPrice = this.items.filter(item => item.selected).reduce((acc, item) => (acc + item.price), 0);
           if (confirm(`Sending a request for ${totalPrice} to ${name}`)) {
             axios.post('https://82d8fd4a.ngrok.io', {
-              [phoneNo]: totalPrice
+              [phoneNo]: Number(totalPrice.toFixed(2))
             }).then(res => {
               this.navCtrl.push("confirmation");
             }).catch(alert)
