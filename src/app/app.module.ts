@@ -1,4 +1,4 @@
-import { AboutPage } from './../pages/about/about';
+
 import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -12,12 +12,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { Contacts } from '@ionic-native/contacts/ngx';
 import { ConfirmationPage } from '../pages/confirmation/confirmation';
+import { AboutPage } from '../pages/about/about';
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
     ContactPage,
+    AboutPage,
     HomePage,
     ItemsListPage,
     ConfirmationPage
@@ -37,11 +38,11 @@ import { ConfirmationPage } from '../pages/confirmation/confirmation';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
     ContactPage,
     HomePage,
     ItemsListPage,
-    ConfirmationPage
+    ConfirmationPage,
+    AboutPage
   ],
   providers: [
     StatusBar,
