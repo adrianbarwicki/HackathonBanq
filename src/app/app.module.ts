@@ -1,4 +1,4 @@
-import { CameraPage } from './../pages/camera/camera';
+import { AboutPage } from './../pages/about/about';
 import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -15,7 +15,7 @@ import { ConfirmationPage } from '../pages/confirmation/confirmation';
 @NgModule({
   declarations: [
     MyApp,
-    CameraPage,
+    AboutPage,
     ContactPage,
     HomePage,
     ItemsListPage,
@@ -36,7 +36,7 @@ import { ConfirmationPage } from '../pages/confirmation/confirmation';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    CameraPage,
+    AboutPage,
     ContactPage,
     HomePage,
     ItemsListPage,
