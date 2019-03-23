@@ -2,16 +2,14 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-itemslist',
+  templateUrl: 'itemslist.html'
 })
-export class AboutPage {
-
+export class ItemsListPage {
   constructor(public navCtrl: NavController) {
-
   }
 
   private goToNextPage() {
-    this.navCtrl.push("itemslist");
+    this.navCtrl.push("confirmation");
   }
 }

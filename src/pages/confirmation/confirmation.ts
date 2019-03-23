@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-confirmation',
+  templateUrl: 'confirmation.html'
 })
-export class AboutPage {
+export class ConfirmationPage {
 
   constructor(public navCtrl: NavController) {
 
   }
 
   private goToNextPage() {
-    this.navCtrl.push("itemslist");
+    this.navCtrl.push(HomePage);
   }
 }
